@@ -19,7 +19,7 @@ Push to GitHub, import the repo in Vercel, accept the Next.js defaults. No envir
 Items without `src` (or whose video fails) show a built-in animated fallback. The orbit is `aspect-ratio: 16 / 9` to match the supplied clips; change it in `globals.css` (`.orbit`, `.orbit-col`, `--h`) and `ConnectionLines.tsx` if you switch ratios.
 
 ## Replace team placeholders
-Edit `TEAM` in `src/lib/constants.ts`. Members with `name`, `role`, `bio`, `x`, `linkedin` and `src` are clickable and show a profile; entries without a name stay as placeholders. Use square images in `public/images/team/`.
+Edit `TEAM` in `src/lib/constants.ts`. Members with `name`, `role`, `bio`, `x`, `linkedin` and `src` are clickable and open a profile modal; entries without a name stay as placeholders. Use square images in `public/images/team/`.
 
 ## Brand colors
 Edit `src/theme/index.ts` (Chakra tokens) and the CSS variables at the top of `src/app/globals.css`.
