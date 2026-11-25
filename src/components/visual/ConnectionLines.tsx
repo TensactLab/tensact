@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-/* Coordinates are in units of 1% of the orbit's width. The orbit occupies x 10–110, y 0–100. */
-const PATHS = ["M0 2 L10 16", "M0 80 L10 68", "M120 2 L110 16"];
-const DOTS = [[10, 16], [10, 68], [110, 16]];
+/* Coordinates are in units of 1% of the orbit's width. The orbit occupies x 10–110, y 0–56.25. */
+const PATHS = ["M0 2 L10 10", "M0 45 L10 38", "M120 2 L110 10"];
+const DOTS = [[10, 10], [10, 38], [110, 10]];
 
 export function ConnectionLines() {
   const ref = useRef<SVGSVGElement>(null);
@@ -20,7 +20,7 @@ export function ConnectionLines() {
   }, []);
 
   return (
-    <svg ref={ref} className="lines" viewBox="0 0 120 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+    <svg ref={ref} className="lines" viewBox="0 0 120 56.25" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
       {PATHS.map((d) => (
         <path key={d} d={d} pathLength={1} />
       ))}
